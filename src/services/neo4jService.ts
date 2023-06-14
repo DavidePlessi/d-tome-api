@@ -17,7 +17,7 @@ class Neo4jService {
     );
   }
 
-  async run(query, params) {
+  async run(query: string, params: object) {
     const session = this.driver.session();
 
     try {
@@ -27,7 +27,7 @@ class Neo4jService {
     }
   }
 
-  async read(query, params) {
+  async read(query: string, params: object) {
     const session = this.driver.session();
 
     try {
@@ -39,7 +39,7 @@ class Neo4jService {
     }
   }
 
-  async write(query, params) {
+  async write(query: string, params: object) {
     const session = this.driver.session();
 
     try {

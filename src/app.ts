@@ -1,11 +1,9 @@
-import express from 'express';
-const app = express();
+import getServer from "./server";
+
 const port = 3000;
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
+const server = getServer();
 
-app.listen(port, () => {
-    return console.log(`Express is listening at http://localhost:${port}`);
+server.listen(port, () => {
+    console.log('Server listening on port 3000');
 });
